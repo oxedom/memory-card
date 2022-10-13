@@ -16,3 +16,7 @@ background-color: brown;
     flex-direction: column;
     justify-content: space-between;
   }
+
+.memory-card {
+    background-color: aliceblue;
+}

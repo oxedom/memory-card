@@ -1,11 +1,11 @@
-import useState from 'react'
 import uniqid from 'uniqid'
+import React, { useState } from 'react';
+import Card from './card'
 
 const Gameboard = () => {
 
-
-    const [currentScore, setCurrentScore] = useState(0)
-    const [highScore, setHighScore] = useState(0)
+    const [currentScore, setCurrentScore] = useState(0);
+    const [highScore, setHighScore] = useState(0);
     const cards =
         [
             {
@@ -51,6 +51,7 @@ const Gameboard = () => {
 
 
     return (<main>
+        {cards.map(c => <Card name={c.name} a-id={c.id} key={c.id}> </Card>)}
 
     </main>);
 }

@@ -6,27 +6,41 @@
 background-color: brown;
 }
 
-.gameboard {
-    flex-grow: 1;
+.main {
+
+
+    display: flex;
+    justify-content: center;
 }
+
+
 
 .gameboard-grid {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(3, 100px);
-    justify-content: center;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(3, 150px);
     grid-gap: 10px;
+}
+
+.gameboard-grid > section:hover{
+    transform: scale(1.05);
 }
 
 .flex-wrapper {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
     justify-content: space-between;
   }
 
 .memory-card {
+
     background-color: aliceblue;
     border: solid 2px black;
     padding: 0.5rem;
+}
+
+.memory-card ::hover {
+    background-color: antiquewhite;
 }

@@ -66,10 +66,14 @@ const Gameboard = () => {
 
 
 
-    return (<main className='gameboard-grid'>
-        {cards.map(c => <Card name={c.name} a-id={c.id} key={c.id}> </Card>)}
+    return (
+        <div className='main'>
+            <main className='gameboard-grid'>
+                {cards.map(c => <Card name={c.name} a-id={c.id} key={c.id}> </Card>)}
 
-    </main>);
+            </main>
+        </div>
+    );
 }
 
 export default Gameboard;

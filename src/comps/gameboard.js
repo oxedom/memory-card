@@ -8,6 +8,7 @@ const Gameboard = () => {
     const [currentScore, setCurrentScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [clicked, setClicked] = useState([])
+    const [init, setInit] = useState(false)
 
     const [cards, setCards] = useState([
         {
@@ -73,15 +74,18 @@ const Gameboard = () => {
     }
 
     const handleGameOver = () => {
-        alert(currentScore)
+        alert('gameover')
 
-
-        // setCurrentScore(0)
     }
+
+    useEffect(() => {
+        if (currentScore > highScore) { setHighScore(currentScore) }
+    }, [currentScore]);
 
 
 
     useEffect(() => {
+        setInit(true)
         //Shuffles Array to make memory game harder
         function shuffle(array) { return array.sort(() => Math.random() - 0.5); }
         //Checks the Clicked Array for Duplicates
@@ -89,8 +93,11 @@ const Gameboard = () => {
 
         setCards(shuffle(cards))
 
-        if (hasDuplicates(clicked)) { handleGameOver() }
-        else { setCurrentScore((prevState) => { return prevState + 1 }) }
+        if (init) {
+            if (hasDuplicates(clicked)) { handleGameOver() }
+            else { setCurrentScore((prevState) => { return prevState + 1 }) }
+        }
+
 
     }, [clicked]);
 
@@ -102,7 +109,11 @@ const Gameboard = () => {
 
     return (
         <div className='main'>
+            <h4> currentScore: {currentScore} </h4>
+
+            <h1> highScore: {currentScore} </h1>
             <main className='gameboard-grid'>
+
 
                 {cards.map(c => <Card handleClick={(e) => { addClicked(c.id) }} name={c.name} a-id={c.id} key={c.id}> </Card>)}
 

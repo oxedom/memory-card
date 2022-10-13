@@ -1,11 +1,26 @@
 import uniqid from 'uniqid'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './card'
 
 const Gameboard = () => {
 
     const [currentScore, setCurrentScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
+    const [clicked, setClicked] = useState([])
+
+    const addClicked = (id) => {
+        setClicked((previousState) => {
+            return [...previousState, id]
+        })
+    }
+
+    useEffect(() => {
+
+    }, [clicked]);
+
+
+
+
     const cards =
         [
             {
@@ -64,12 +79,11 @@ const Gameboard = () => {
         ]
 
 
-
-
     return (
         <div className='main'>
             <main className='gameboard-grid'>
-                {cards.map(c => <Card name={c.name} a-id={c.id} key={c.id}> </Card>)}
+
+                {cards.map(c => <Card handleClick={(e) => { addClicked(c.id) }} name={c.name} a-id={c.id} key={c.id}> </Card>)}
 
             </main>
         </div>

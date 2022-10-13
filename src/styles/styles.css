@@ -7,10 +7,9 @@ background-color: brown;
 }
 
 .main {
-
-
     display: flex;
     justify-content: center;
+    /* flex-direction: column; */
 }
 
 

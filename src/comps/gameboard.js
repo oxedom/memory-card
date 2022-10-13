@@ -75,7 +75,7 @@ const Gameboard = () => {
 
     const handleGameOver = () => {
         alert('gameover')
-
+        setCurrentScore(0)
     }
 
     useEffect(() => {
@@ -113,7 +113,6 @@ const Gameboard = () => {
 
             <h1> highScore: {currentScore} </h1>
             <main className='gameboard-grid'>
-
 
                 {cards.map(c => <Card handleClick={(e) => { addClicked(c.id) }} name={c.name} a-id={c.id} key={c.id}> </Card>)}
 

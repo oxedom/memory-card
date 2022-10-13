@@ -1,0 +1,18 @@
+.header {
+    background-color: antiquewhite;
+}
+
+.footer {
+background-color: brown;
+}
+
+.gameboard {
+    flex-grow: 1;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }

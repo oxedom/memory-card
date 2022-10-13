@@ -44,13 +44,29 @@ const Gameboard = () => {
             {
                 id: uniqid(),
                 name: 'Pentax K1000'
-            }
+            },
+            {
+                id: uniqid(),
+                name: 'Nikon F'
+            },
+            {
+                id: uniqid(),
+                name: 'Rollieflex'
+            },
+            {
+                id: uniqid(),
+                name: 'Lecia M6'
+            },
+            // {
+            //     id: uniqid(),
+            //     name: 'Holga 120GN'
+            // }
         ]
 
 
 
 
-    return (<main>
+    return (<main className='gameboard-grid'>
         {cards.map(c => <Card name={c.name} a-id={c.id} key={c.id}> </Card>)}
 
     </main>);

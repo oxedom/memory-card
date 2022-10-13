@@ -10,6 +10,14 @@ background-color: brown;
     flex-grow: 1;
 }
 
+.gameboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    grid-gap: 10px;
+}
+
 .flex-wrapper {
     display: flex;
     min-height: 100vh;
@@ -19,4 +27,6 @@ background-color: brown;
 
 .memory-card {
     background-color: aliceblue;
+    border: solid 2px black;
+    padding: 0.5rem;
 }

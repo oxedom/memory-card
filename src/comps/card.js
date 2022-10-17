@@ -3,7 +3,7 @@ const Card = (props) => {
   return (
     <section onClick={props.handleClick} className="memory-card">
       <p>{props.name}</p>
-      <img src=""></img>
+      <img className="cam-img" src={props.src}></img>
     </section>
   );
 };

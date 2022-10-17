@@ -12,6 +12,11 @@
   /* flex-direction: column; */
 }
 
+.cam-img {
+  max-width: 150px;
+  max-block-size: 150px;
+}
+
 .gameboard-grid {
   display: grid;
   grid-template-columns: repeat(4, 150px);
@@ -32,6 +37,7 @@
 }
 
 .memory-card {
+  display: flex;
   background-color: aliceblue;
   border: solid 2px black;
   padding: 0.5rem;

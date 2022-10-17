@@ -84,6 +84,7 @@ const Gameboard = () => {
     ]);
 
     const addClicked = (id) => {
+        //Updates Clicked Array with the ID of the cell clicked 
         setClicked((previousState) => {
             return [...previousState, id];
         });
@@ -100,14 +101,11 @@ const Gameboard = () => {
 
     const handleGameOver = () => {
         //Set a new highscore of currentScore is bigger than Highscore
-        console.log(currentScore);
-        console.log('000000000000');
-        console.log(highScore);
         if (currentScore > highScore) {
             setHighScore(currentScore);
         }
         //Reset Current Score
-        setCurrentScore(0);
+        setCurrentScore(-1);
         setClicked([]);
     };
 

@@ -13,14 +13,16 @@
 }
 
 .cam-img {
-  max-width: 150px;
-  max-block-size: 150px;
+border-radius: 30px;
+  width: 140px;
+  max-height: max-content;
 }
 
 .gameboard-grid {
+  
   display: grid;
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(3, 200px);
   grid-gap: 10px;
 }
 
@@ -32,15 +34,16 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-
   justify-content: space-between;
 }
 
 .memory-card {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: aliceblue;
   border: solid 2px black;
-  padding: 0.5rem;
 }
 
 .memory-card ::hover {

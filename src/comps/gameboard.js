@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Scoreboard from "./scoreboard";
+import Gameover from "./gameover";
 import useDidMountEffect from "./hooks/useDidMountEffect";
 import Card from "./card";
 import img1 from '../images/1 - x300.jpg'
@@ -18,7 +20,7 @@ const Gameboard = () => {
     const [currentScore, setCurrentScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [clicked, setClicked] = useState([]);
-
+    const [Interlood, setInterlood] = useState(false)
     const [cards, setCards] = useState([
         {
             id: 1,
@@ -100,13 +102,23 @@ const Gameboard = () => {
     }
 
     const handleGameOver = () => {
+        setInterlood(true)
         //Set a new highscore of currentScore is bigger than Highscore
-        if (currentScore > highScore) {
-            setHighScore(currentScore);
-        }
-        //Reset Current Score
-        setCurrentScore(-1);
-        setClicked([]);
+        //Interlood
+
+
+
+        setTimeout(() => {
+            if (currentScore > highScore) {
+                setHighScore(currentScore);
+            }
+
+            setCurrentScore(-1);
+            setClicked([]);
+            setInterlood(false)
+
+        }, 3500);
+
     };
 
 
@@ -121,24 +133,26 @@ const Gameboard = () => {
 
     return (
         <div className="main">
-            <h4> currentScore: {currentScore} </h4>
-
-            <h1> highScore: {highScore} </h1>
-            <main className="gameboard-grid">
-                {cards.map((c) => (
-                    <Card
-                        handleClick={(e) => {
-                            addClicked(c.id);
-                        }}
-                        name={c.name}
-                        a-id={c.id}
-                        src={c.src}
-                        key={c.id}
-                    >
-                        {" "}
-                    </Card>
-                ))}
-            </main>
+            {Interlood ? <Gameover score={currentScore}> </Gameover> :
+                <>
+                    <Scoreboard currentScore={currentScore} highScore={highScore}> </Scoreboard>
+                    <main className="gameboard-grid">
+                        {cards.map((c) => (
+                            <Card
+                                handleClick={(e) => {
+                                    addClicked(c.id);
+                                }}
+                                name={c.name}
+                                a-id={c.id}
+                                src={c.src}
+                                key={c.id}
+                            >
+                                {" "}
+                            </Card>
+                        ))}
+                    </main>
+                </>
+            }
         </div>
     );
 };

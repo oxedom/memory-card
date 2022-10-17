@@ -3,13 +3,29 @@
 }
 
 .footer {
-  background-color: brown;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px;
+  background-color: brown
 }
+
+.footer a {
+  background-color: brown;
+  text-decoration: dashed;
+}
+
+.footer svg {
+  background-color: brown
+}
+
+
 
 .main {
   display: flex;
+  align-items: center;
   justify-content: center;
-  /* flex-direction: column; */
+  flex-direction: column;
 }
 
 .cam-img {
@@ -24,6 +40,7 @@ border-radius: 30px;
   grid-template-columns: repeat(4, 200px);
   grid-template-rows: repeat(3, 200px);
   grid-gap: 10px;
+  margin-bottom: 20px;
 }
 
 .gameboard-grid > section:hover {
@@ -49,3 +66,23 @@ border-radius: 30px;
 .memory-card ::hover {
   background-color: antiquewhite;
 }
+
+.scoreboard {
+  /* display:block; */
+  /* position: absolute; */
+}
+
+.gameover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+.gameover img {
+  width: 500px;
+  height: auto;
+}
+

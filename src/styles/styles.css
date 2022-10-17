@@ -1,3 +1,12 @@
+:root {
+  --c1: #161517;
+
+  --c2: #454e4b;
+}
+
+body {
+  background: linear-gradient(101deg, rgba(202,129,22,1) 0%, rgba(171,8,8,1) 90%);
+}
 .header {
   background-color: antiquewhite;
 }
@@ -30,15 +39,15 @@
 
 .cam-img {
 border-radius: 30px;
-  width: 140px;
+  width: 120px;
   max-height: max-content;
 }
 
 .gameboard-grid {
   
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(4, 175px);
+  grid-template-rows: repeat(3, 175px);
   grid-gap: 10px;
   margin-bottom: 20px;
 }
@@ -56,10 +65,11 @@ border-radius: 30px;
 
 .memory-card {
   display: flex;
+
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: aliceblue;
+  border-radius: 10px;
   border: solid 2px black;
 }
 

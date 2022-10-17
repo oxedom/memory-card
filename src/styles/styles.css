@@ -1,45 +1,42 @@
 .header {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 
 .footer {
-background-color: brown;
+  background-color: brown;
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
 }
-
-
 
 .gameboard-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: repeat(3, 150px);
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(3, 150px);
+  grid-gap: 10px;
 }
 
-.gameboard-grid > section:hover{
-    transform: scale(1.05);
+.gameboard-grid > section:hover {
+  transform: scale(1.05);
 }
 
 .flex-wrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 
-    justify-content: space-between;
-  }
+  justify-content: space-between;
+}
 
 .memory-card {
-
-    background-color: aliceblue;
-    border: solid 2px black;
-    padding: 0.5rem;
+  background-color: aliceblue;
+  border: solid 2px black;
+  padding: 0.5rem;
 }
 
 .memory-card ::hover {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }

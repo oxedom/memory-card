@@ -1,11 +1,10 @@
-import './styles/styles.css'
-import Header from "../src/comps/header"
-import Footer from './comps/footer';
-import Gameboard from './comps/gameboard';
-import React, { useState } from 'react';
+import "./styles/styles.css";
+import Header from "../src/comps/header";
+import Footer from "./comps/footer";
+import Gameboard from "./comps/gameboard";
+import React, { useState } from "react";
 
 function App() {
-
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
 

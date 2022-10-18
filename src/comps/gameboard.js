@@ -20,7 +20,7 @@ const Gameboard = () => {
     const [currentScore, setCurrentScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [clicked, setClicked] = useState([]);
-    const [Interlood, setInterlood] = useState(false)
+    const [interlood, setInterlood] = useState(false)
     const [cards, setCards] = useState([
         {
             id: 1,
@@ -104,7 +104,7 @@ const Gameboard = () => {
     const handleGameOver = () => {
         setInterlood(true)
         //Set a new highscore of currentScore is bigger than Highscore
-        //Interlood
+        //interlood
 
 
 
@@ -133,7 +133,7 @@ const Gameboard = () => {
 
     return (
         <div className="main">
-            {Interlood ? <Gameover score={currentScore}> </Gameover> :
+            {interlood ? <Gameover score={currentScore}> </Gameover> :
                 <>
                     <Scoreboard currentScore={currentScore} highScore={highScore}> </Scoreboard>
                     <main className="gameboard-grid">

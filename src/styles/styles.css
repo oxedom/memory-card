@@ -113,15 +113,20 @@ font-weight: 100;
   align-items: center;
   margin: 10px;
   background-color: aliceblue;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .gameover img {
   width: 500px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   height: auto;
 }
 
 .gameover h1 {
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #f64c4c;
   font-family: Satoshi, Courier, monospace;
 }
 

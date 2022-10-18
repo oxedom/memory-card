@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.6dbf6555.css",
+    "main.js": "/memory-card/static/js/main.21e5e7b7.js",
+    "static/js/787.d6a8b40f.chunk.js": "/memory-card/static/js/787.d6a8b40f.chunk.js",
+    "static/media/3 - fuji 69.jpg": "/memory-card/static/media/3 - fuji 69.3cbd129801f190f94090.jpg",
+    "static/media/10- nikon f.JPG": "/memory-card/static/media/10- nikon f.36f7bfb4451d0fd510b9.JPG",
+    "static/media/8 - canon ae1.JPG": "/memory-card/static/media/8 - canon ae1.da903dc118e8529265fd.JPG",
+    "static/media/9 - pentax k1000.png": "/memory-card/static/media/9 - pentax k1000.592c611507dc30865cbc.png",
+    "static/media/11 - rollieflex.jpg": "/memory-card/static/media/11 - rollieflex.5f3e0d4da49ac03a17d5.jpg",
+    "static/media/2 - haselblad 500.jpg": "/memory-card/static/media/2 - haselblad 500.36e921d76b3df1705846.jpg",
+    "static/media/7 - olympus  trip.jpeg": "/memory-card/static/media/7 - olympus  trip.52dc8bbdc817779c337d.jpeg",
+    "static/media/12 - lecia m6.jpg": "/memory-card/static/media/12 - lecia m6.f6930faf5c861f7cbdc5.jpg",
+    "static/media/gameover.jpg": "/memory-card/static/media/gameover.f7321ec602eb6f643d7d.jpg",
+    "static/media/1 - x300.jpg": "/memory-card/static/media/1 - x300.c54d7fe86eb8c6d96638.jpg",
+    "static/media/5 - lecia iiif.jpg": "/memory-card/static/media/5 - lecia iiif.de0a964908779d271445.jpg",
+    "static/media/4 - pentax 67.jpg": "/memory-card/static/media/4 - pentax 67.33349a7409bd62adbf60.jpg",
+    "static/media/6 - rb67.jpeg": "/memory-card/static/media/6 - rb67.b916172bb7e59f2ff8c1.jpeg",
+    "static/media/Satoshi-Regular.ttf": "/memory-card/static/media/Satoshi-Regular.fe762acc7e97cb612805.ttf",
+    "index.html": "/memory-card/index.html",
+    "main.6dbf6555.css.map": "/memory-card/static/css/main.6dbf6555.css.map",
+    "main.21e5e7b7.js.map": "/memory-card/static/js/main.21e5e7b7.js.map",
+    "787.d6a8b40f.chunk.js.map": "/memory-card/static/js/787.d6a8b40f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6dbf6555.css",
+    "static/js/main.21e5e7b7.js"
+  ]
+}

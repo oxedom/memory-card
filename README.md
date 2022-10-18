@@ -14,4 +14,4 @@ The design of the project is to showcase the understanding of items below:
 ## Where can I play this game?
 
 Follow the link to the github page:
-https://mrlepak.github.io/memoryGame/
+https://oxedom.github.io/memory-card/

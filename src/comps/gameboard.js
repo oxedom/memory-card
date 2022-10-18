@@ -84,6 +84,7 @@ const Gameboard = () => {
             src: img12
         },
     ]);
+    const [timeID, setTimeID] = useState(undefined)
 
     const addClicked = (id) => {
         //Updates Clicked Array with the ID of the cell clicked 
@@ -108,7 +109,7 @@ const Gameboard = () => {
 
 
 
-        setTimeout(() => {
+        const t = setTimeout(() => {
             if (currentScore > highScore) {
                 setHighScore(currentScore);
             }
@@ -119,12 +120,19 @@ const Gameboard = () => {
 
         }, 3500);
 
+        setTimeID(t)
+
+
     };
 
 
 
 
     useDidMountEffect(() => {
+        if (timeID !== undefined) {
+
+            clearTimeout(timeID)
+        }
         setCards(shuffle(cards));
         if (clicked.length === 12) {
             //Was to lazy to implement a winning case, but if I were to do it I would refactor the 

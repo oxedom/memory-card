@@ -1,11 +1,19 @@
 :root {
   --c1: #161517;
-
   --c2: #454e4b;
 }
 
+@font-face {
+  font-family: Satoshi;
+src: url(/src/styles/Satoshi-Regular.ttf);
+}
+
+ 
 body {
-  background: linear-gradient(101deg, rgba(202,129,22,1) 0%, rgba(171,8,8,1) 90%);
+  margin: 0;
+  font-family: Satoshi, Courier, monospace;
+  background-color: #8a6ca7;
+
 }
 .header {
   background-color: antiquewhite;
@@ -14,18 +22,28 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  gap: 3px;
-  padding: 10px;
-  background-color: brown
+  gap:10px;
+  padding: 5px;
+  background-color: #b879be;
+
+}
+
+.scoreboard-svg {
+display: flex;
+gap: 10px;
+}
+
+.scoreboard-svg img {
+  object-fit: contain;
 }
 
 .footer a {
-  background-color: brown;
+  color: black;
   text-decoration: dashed;
 }
 
 .footer svg {
-  background-color: brown
+  /* background-color: brown */
 }
 
 
@@ -37,19 +55,26 @@ body {
   flex-direction: column;
 }
 
+.img-container {
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
 .cam-img {
-border-radius: 30px;
-  width: 120px;
-  max-height: max-content;
+  width: 150px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  object-fit:cover
+
 }
 
 .gameboard-grid {
   
   display: grid;
-  grid-template-columns: repeat(4, 175px);
-  grid-template-rows: repeat(3, 175px);
-  grid-gap: 10px;
-  margin-bottom: 20px;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 15px;
 }
 
 .gameboard-grid > section:hover {
@@ -65,21 +90,20 @@ border-radius: 30px;
 
 .memory-card {
   display: flex;
-
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  align-items:center;
   flex-direction: column;
+  background-color: rgb(199, 173, 202);
+
+  box-shadow: 1px 1px 2px  rgb(21, 20, 20);
   border-radius: 10px;
-  border: solid 2px black;
+  /* border: solid 1px black; */
 }
 
-.memory-card ::hover {
-  background-color: antiquewhite;
-}
 
-.scoreboard {
-  /* display:block; */
-  /* position: absolute; */
+.cam-name {
+font-weight: 100;
 }
 
 .gameover {
@@ -88,11 +112,28 @@ border-radius: 30px;
   justify-content: center;
   align-items: center;
   margin: 10px;
-  background-image: linear-gradient(to bottom right, red, yellow);
+  background-color: aliceblue;
+  border-radius: 10px;
 }
 
 .gameover img {
   width: 500px;
   height: auto;
+}
+
+.gameover h1 {
+  font-family: Satoshi, Courier, monospace;
+}
+
+.scoreboard {
+
+  font-family: Satoshi, Courier, monospace;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  background-color: #b879be;
 }
 

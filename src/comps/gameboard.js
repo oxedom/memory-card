@@ -133,6 +133,7 @@ const Gameboard = () => {
             //the user he won and restarting the game with handleGameOver
             alert('You Won')
             handleGameOver()
+            setHighScore(12)
         }
         if (hasDuplicates(clicked)) { handleGameOver(); }
         else { setCurrentScore((prevState) => prevState + 1); }

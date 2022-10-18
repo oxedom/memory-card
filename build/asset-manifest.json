@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/memory-card/static/css/main.6dbf6555.css",
-    "main.js": "/memory-card/static/js/main.21e5e7b7.js",
+    "main.js": "/memory-card/static/js/main.7d7f6946.js",
     "static/js/787.d6a8b40f.chunk.js": "/memory-card/static/js/787.d6a8b40f.chunk.js",
     "static/media/3 - fuji 69.jpg": "/memory-card/static/media/3 - fuji 69.3cbd129801f190f94090.jpg",
     "static/media/10- nikon f.JPG": "/memory-card/static/media/10- nikon f.36f7bfb4451d0fd510b9.JPG",
@@ -19,11 +19,11 @@
     "static/media/Satoshi-Regular.ttf": "/memory-card/static/media/Satoshi-Regular.fe762acc7e97cb612805.ttf",
     "index.html": "/memory-card/index.html",
     "main.6dbf6555.css.map": "/memory-card/static/css/main.6dbf6555.css.map",
-    "main.21e5e7b7.js.map": "/memory-card/static/js/main.21e5e7b7.js.map",
+    "main.7d7f6946.js.map": "/memory-card/static/js/main.7d7f6946.js.map",
     "787.d6a8b40f.chunk.js.map": "/memory-card/static/js/787.d6a8b40f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6dbf6555.css",
-    "static/js/main.21e5e7b7.js"
+    "static/js/main.7d7f6946.js"
   ]
 }

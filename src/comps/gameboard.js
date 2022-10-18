@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Scoreboard from "./scoreboard";
 import Gameover from "./gameover";
-import useDidMountEffect from "./hooks/useDidMountEffect";
 import Card from "./card";
 import img1 from '../images/1 - x300.jpg'
 import img2 from '../images/2 - haselblad 500.jpg'
@@ -21,7 +20,7 @@ const Gameboard = () => {
     const [highScore, setHighScore] = useState(0);
     const [clicked, setClicked] = useState([]);
     const [interlood, setInterlood] = useState(false)
-    const [cards, setCards] = useState([
+    const [cards, setCards] = useState(shuffle([
         {
             id: 1,
             name: "Minolta X300",
@@ -83,23 +82,30 @@ const Gameboard = () => {
             name: "Lecia M6",
             src: img12
         },
-    ]);
+    ]));
 
     const addClicked = (id) => {
         //Updates Clicked Array with the ID of the cell clicked 
         setClicked((previousState) => {
             return [...previousState, id];
         });
+        setCards(shuffle(cards));
+        if (clicked.length === 12) {
+            //Was to lazy to implement a winning case, but if I were to do it I would refactor the 
+            //handle gameover into a function that takes a parameter and updates a parameter that would go directly into the 
+            //gameover comp that would rendering acording to winning or losing. but I'm a bit in a rush so I will be just alerting 
+            //the user he won and restarting the game with handleGameOver
+            alert('You Won')
+            handleGameOver()
+            setHighScore(12)
+        }
+        if (hasDuplicates(clicked)) {
+            handleGameOver();
+        }
+        else {
+            setCurrentScore((prevState) => prevState + 1);
+        }
     };
-
-    //Shuffles Array to make memory game harder
-    function shuffle(array) {
-        return array.sort(() => Math.random() - 0.5);
-    }
-    //Checks the Clicked Array for Duplicates
-    function hasDuplicates(array) {
-        return new Set(array).size !== array.length;
-    }
 
     const handleGameOver = () => {
         setInterlood(true)
@@ -120,24 +126,6 @@ const Gameboard = () => {
         }, 3500);
 
     };
-
-
-
-
-    useDidMountEffect(() => {
-        setCards(shuffle(cards));
-        if (clicked.length === 12) {
-            //Was to lazy to implement a winning case, but if I were to do it I would refactor the 
-            //handle gameover into a function that takes a parameter and updates a parameter that would go directly into the 
-            //gameover comp that would rendering acording to winning or losing. but I'm a bit in a rush so I will be just alerting 
-            //the user he won and restarting the game with handleGameOver
-            alert('You Won')
-            handleGameOver()
-            setHighScore(12)
-        }
-        if (hasDuplicates(clicked)) { handleGameOver(); }
-        else { setCurrentScore((prevState) => prevState + 1); }
-    }, [clicked]);
 
     return (
         <div className="main">
@@ -166,3 +154,12 @@ const Gameboard = () => {
 };
 
 export default Gameboard;
+
+//Shuffles Array to make memory game harder
+function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+//Checks the Clicked Array for Duplicates
+function hasDuplicates(array) {
+    return new Set(array).size !== array.length;
+}

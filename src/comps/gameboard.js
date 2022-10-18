@@ -126,7 +126,14 @@ const Gameboard = () => {
 
     useDidMountEffect(() => {
         setCards(shuffle(cards));
-
+        if (clicked.length === 12) {
+            //Was to lazy to implement a winning case, but if I were to do it I would refactor the 
+            //handle gameover into a function that takes a parameter and updates a parameter that would go directly into the 
+            //gameover comp that would rendering acording to winning or losing. but I'm a bit in a rush so I will be just alerting 
+            //the user he won and restarting the game with handleGameOver
+            alert('You Won')
+            handleGameOver()
+        }
         if (hasDuplicates(clicked)) { handleGameOver(); }
         else { setCurrentScore((prevState) => prevState + 1); }
     }, [clicked]);

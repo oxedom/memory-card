@@ -114,22 +114,21 @@ const Gameboard = () => {
 
 
 
-        setTimeout(() => {
-            if (currentScore > highScore) {
-                setHighScore(currentScore);
-            }
-
-            setCurrentScore(-1);
-            setClicked([]);
-            setInterlood(false)
-
-        }, 3500);
-
     };
+
+    const handleNewGame = () => {
+        if (currentScore > highScore) {
+            setHighScore(currentScore);
+        }
+
+        setCurrentScore(-1);
+        setClicked([]);
+        setInterlood(false);
+    }
 
     return (
         <div className="main">
-            {interlood ? <Gameover score={currentScore}> </Gameover> :
+            {interlood ? <Gameover score={currentScore} onDone={handleNewGame}> </Gameover> :
                 <>
                     <Scoreboard currentScore={currentScore} highScore={highScore}> </Scoreboard>
                     <main className="gameboard-grid">
